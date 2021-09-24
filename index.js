@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 
 (async () => {
-    const url = "mongodb://localhost:27017";
-    const dbName = "ocean_bancodados_22_09_2021";
+    const url = "mongodb+srv://admin:987654321@cluster0.xmuhk.mongodb.net/";
+    const dbName = "ocean_nuvemRF_22_09_2021";
 
     const client = await MongoClient.connect(url);
 
@@ -140,5 +140,5 @@ const app = express();
         res.send("Personagem removida com sucesso!");
     });
 
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 })();
